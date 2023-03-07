@@ -4,24 +4,72 @@
 }
 
 body {
-    font-family: Lora, Ubuntu, arial;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
 }
+
+/* 2:55  */
 
 /*===============
 Typography
 =================*/
-h1 {
-    font-family: Lora;
-    font-weight: 700;
+
+/* fonts : Lora 400 only
+ ubuntu is 300 and 700 only  */
+
+h1,
+h2,
+h3 {
+    font-family: "Lora", serif;
+    font-weight: 400;
     color: #143774;
+}
+
+h1 {
     font-size: 2rem;
 }
 
+strong {
+    font-weight: 700;
+}
+/* the logo subtitle  / h1 subtitle  */
 .subtitle {
-    font-family: Ubuntu;
-    font-weight: 300;
+    font-weight: 700;
     color: #1792d2;
     font-size: 0.75rem;
+    margin: 0;
+}
+
+.article-title {
+    font-size: 1.5rem;
+}
+
+.continue-reading {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1792d2;
+    text-decoration: none;
+}
+.continue-reading:hover,
+.continue-reading:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+
+.article-date {
+    font-size: 0.875rem;
+}
+
+.article-body a {
+    color: #1792d2;
+    font-weight: bolder;
+}
+
+.article-body a:hover,
+.article-body a:focus {
+    color: #143774;
 }
 
 /* =============
