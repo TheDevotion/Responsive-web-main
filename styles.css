@@ -1,3 +1,7 @@
+/* Tip 
+when structuring the website do desktip first for html 
+then when it comes to CSS , preffere mobile first approach */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +14,10 @@ body {
     font-weight: 300;
 }
 
-/* 2:55  */
+img {
+    max-width: 100%;
+    display: block; /* Very Imp */
+}
 
 /*===============
 Typography
@@ -44,6 +51,10 @@ strong {
 
 .article-title {
     font-size: 1.5rem;
+    padding: 1em 0;
+}
+.article-body {
+    padding-bottom: 1em;
 }
 
 .continue-reading {
@@ -60,6 +71,7 @@ strong {
 
 .article-date {
     font-size: 0.875rem;
+    margin: 2em 0;
 }
 
 .article-body a {
@@ -72,38 +84,68 @@ strong {
     color: #143774;
 }
 
+/* articles  */
+.article-main {
+    border-bottom: 1px solid #707070;
+
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+.article-more {
+    padding: 2.5em 0;
+}
+
 /* =============
 STYLES
 ===============*/
+
+/* 
+///////////////////
+Layout 
+////////////////// */
 header {
     text-align: center;
     background: #f8f8f8;
     padding: 2em 0;
 }
+main,
+aside {
+    width: 95%;
+}
 
 .container {
     width: 90%;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1080px;
 }
 
-.container-nav {
+.container-flex {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+main {
+    width: 100%;
+}
+aside {
+    width: 100%;
 }
 
 /* navigation */
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: column;
     padding: 0;
     justify-content: center;
     padding: 1em 0;
 }
 
 nav li {
-    margin-left: 2em;
-    padding: 1em 0;
+    margin-left: 0;
+    padding: 1em 1em;
 }
 
 nav a {
@@ -126,15 +168,25 @@ nav a :focus {
     color: #707070;
 }
 
-@media (max-width: 675px) {
-    .container-nav {
-        flex-direction: column;
-    }
+/* 
+//////////////
+Media queries
+//////////////
+*/
 
-    nav ul {
-        flex-direction: column;
+/* mobile first approach */
+
+@media (min-width: 675px) {
+    .container-flex {
+        flex-direction: row;
     }
-    nav li {
-        margin-left: 0;
+    nav ul {
+        flex-direction: row;
+    }
+    main {
+        width: 72%;
+    }
+    aside {
+        width: 23%;
     }
 }
