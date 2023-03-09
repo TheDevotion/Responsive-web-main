@@ -33,6 +33,7 @@ h3 {
     font-family: "Lora", serif;
     font-weight: 400;
     color: #143774;
+    margin-top: 0;
 }
 
 h1 {
@@ -66,6 +67,7 @@ strong {
     color: #1792d2;
     text-decoration: none;
     order: 5;
+    padding: 1em 0;
 }
 .continue-reading:hover,
 .continue-reading:focus {
@@ -76,6 +78,7 @@ strong {
 .article-date {
     font-size: 0.875rem;
     margin: 2em 0;
+    margin-bottom: 0;
     order: 2;
 }
 
@@ -199,5 +202,15 @@ Media queries
     }
     aside {
         width: 23%;
+    }
+}
+
+@media (min-width: 550px) {
+    .article-more-info-sec {
+        margin-top: -2.5em;
+    }
+
+    .article-date {
+        text-align: right;
     }
 }
