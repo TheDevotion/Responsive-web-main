@@ -94,7 +94,7 @@ strong {
 
 /* articles  */
 /* 
- i am ordering the css display components in different order because it is better for SEO and it makes sense if the css fails to load for some odd reason */
+i am ordering the css display components in different order because it is better for SEO and it makes sense if the css fails to load for some odd reason */
 .article-main {
     border-bottom: 1px solid #707070;
 
@@ -113,6 +113,25 @@ strong {
 /* =============
 STYLES
 ===============*/
+
+/* Images  */
+.article-more-image,
+.top-widget-image,
+.bottom-widget-image {
+    object-fit: cover;
+    max-height: 250px;
+    width: 100%;
+}
+
+.top-widget-image {
+    max-height: 150px;
+}
+
+.bottom-widget-image {
+    max-height: 100px;
+    object-fit: cover;
+    object-position: 25% 70%;
+}
 
 /* 
 ///////////////////
@@ -205,6 +224,8 @@ Media queries
     }
 }
 
+/* 
+ I used negative margin to have more responsive layout */
 @media (min-width: 550px) {
     .article-more-info-sec {
         margin-top: -2.5em;
@@ -212,5 +233,9 @@ Media queries
 
     .article-date {
         text-align: right;
+    }
+
+    .main-date {
+        text-align: left;
     }
 }
