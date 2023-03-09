@@ -1,75 +1,3 @@
-/* Tip 
-when structuring the website do desktop first for html 
-then when it comes to CSS , prefer mobile first approach */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.125rem;
-    font-weight: 300;
-}
-
-img {
-    max-width: 100%;
-    display: block; /* Very Imp */
-    order: 1;
-}
-footer {
-    font-size: 1.125rem;
-    background-color: #143774;
-    text-align: center;
-    color: white;
-    font-family: "Ubuntu", arial;
-    padding: 3em 0;
-    font-weight: 300;
-}
-.footer-title {
-    font-weight: 700;
-}
-
-/*===============
-Typography
-=================*/
-
-/* fonts : Lora 400 only
- ubuntu is 300 and 700 only  */
-
-h1,
-h2,
-h3 {
-    font-family: "Lora", serif;
-    font-weight: 400;
-    color: #143774;
-    margin-top: 0;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-strong {
-    font-weight: 700;
-}
-
-.widget-title {
-    font-family: "Ubuntu";
-    font-weight: bold;
-    font-size: 1.125rem;
-}
-
-.widget-body {
-    font-family: "Lora";
-    font-size: 0.875rem;
-}
-
-.bottom-widget-title {
-    font-size: 1.125rem;
-}
 /* the logo subtitle  / h1 subtitle  */
 .subtitle {
     font-weight: 700;
@@ -206,17 +134,11 @@ Sidebar styles
 }
 .bottom-widget-image {
     padding: 0.5em 0;
+    margin-top: 0.5em;
 }
 .sidebar-widget {
     border: 20px solid #ebebeb;
-}
-
-.bottom-widget {
-    margin-top: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: 2em;
+    margin-bottom: 3em;
 }
 
 .bottom-widget-posts {
@@ -227,8 +149,7 @@ Sidebar styles
 /* 
 the last child pseudo selector is used to apply styles to the last child inside a parent. */
 .bottom-widget-posts:last-child {
-    border: none;
-    padding-bottom: none;
+    border-bottom: none;
 }
 .sidebar-widget {
     padding: 1em;
@@ -253,7 +174,6 @@ nav a {
     text-decoration: none;
     color: #707070;
     font-weight: 700;
-    padding: 0.25em 0;
 }
 
 nav a:hover,
@@ -270,72 +190,24 @@ nav a :focus {
 }
 
 /* 
-//////////////
-Media queries
-//////////////
-*/
+///////////////
+About me 
+/////////// */
 
-/* mobile first approach */
-
-@media (min-width: 675px) {
-    .container-flex {
-        flex-direction: row;
-    }
-    nav ul {
-        flex-direction: row;
-    }
-    main {
-        width: 74%;
-    }
-    aside {
-        width: 22%;
-    }
-
-    .article-more {
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 1em 0;
-    }
-
-    .article-more-img-sec {
-        width: 28%;
-    }
-
-    .article-more-info-sec {
-        width: 68%;
-    }
-
-    .article-more-image,
-    .top-widget-image,
-    .bottom-widget-image {
-        height: 100%;
-    }
-
-    .article-date {
-        margin-top: 0.5em;
-        display: inline-block;
-    }
-    .aritcle-more-image {
-        height: 100%;
-    }
-
-    .article-title {
-        padding-top: 0;
-    }
+.about-me img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 10% 10%;
+    margin-bottom: 2.5em;
 }
 
-/* 
- I used negative margin to have more responsive layout */
-@media (min-width: 550px) and (max-width: 674px) {
-    .article-more-info-sec {
-        margin-top: -2.5em;
-    }
+.about-me h1,
+.about-me p,
+.about-me h3 {
+    margin-bottom: 1em;
+}
 
-    .article-date {
-        text-align: right;
-    }
-
-    .main-date {
-        text-align: left;
-    }
+.about-me h3 {
+    color: #1792d2;
 }

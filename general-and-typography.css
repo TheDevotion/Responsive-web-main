@@ -1,0 +1,72 @@
+/* Tip 
+when structuring the website do desktop first for html 
+then when it comes to CSS , prefer mobile first approach */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    display: block; /* Very Imp */
+    order: 1;
+}
+footer {
+    font-size: 1.125rem;
+    background-color: #143774;
+    text-align: center;
+    color: white;
+    font-family: "Ubuntu", arial;
+    padding: 3em 0;
+    font-weight: 300;
+}
+.footer-title {
+    font-weight: 700;
+}
+
+/*===============
+Typography
+=================*/
+
+/* fonts : Lora 400 only
+ ubuntu is 300 and 700 only  */
+
+h1,
+h2,
+h3 {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.widget-title {
+    font-family: "Ubuntu";
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.widget-body {
+    font-family: "Lora";
+    font-size: 0.875rem;
+}
+
+.bottom-widget-title {
+    font-size: 1.125rem;
+}
