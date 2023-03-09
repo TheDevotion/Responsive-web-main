@@ -1,6 +1,6 @@
 /* Tip 
-when structuring the website do desktip first for html 
-then when it comes to CSS , preffere mobile first approach */
+when structuring the website do desktop first for html 
+then when it comes to CSS , prefer mobile first approach */
 
 * {
     margin: 0;
@@ -18,6 +18,13 @@ img {
     max-width: 100%;
     display: block; /* Very Imp */
     order: 1;
+}
+footer {
+    background-color: #143774;
+    text-align: center;
+    color: white;
+    font-family: "Ubuntu", arial;
+    padding: 3em 0;
 }
 
 /*===============
@@ -42,6 +49,21 @@ h1 {
 
 strong {
     font-weight: 700;
+}
+
+.widget-title {
+    font-family: "Ubuntu";
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.widget-body {
+    font-family: "Lora";
+    font-size: 0.875rem;
+}
+
+.bottom-widget-title {
+    font-size: 1.125rem;
 }
 /* the logo subtitle  / h1 subtitle  */
 .subtitle {
@@ -105,7 +127,7 @@ i am ordering the css display components in different order because it is better
 }
 
 .article-more {
-    padding: 2.5em 0;
+    padding: 1.25em 0;
     display: flex;
     flex-direction: column;
 }
@@ -141,6 +163,7 @@ header {
     text-align: center;
     background: #f8f8f8;
     padding: 2em 0;
+    margin-bottom: 2.5em;
 }
 main,
 aside {
@@ -164,6 +187,44 @@ main {
 }
 aside {
     width: 100%;
+}
+
+/* 
+//////////////////
+Sidebar styles 
+////////////////// */
+
+.top-widget-image {
+    padding: 1em 0;
+}
+.bottom-widget-image {
+    padding: 0.5em 0;
+}
+.sidebar-widget {
+    border: 20px solid #ebebeb;
+}
+
+.bottom-widget {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 2em;
+}
+
+.bottom-widget-posts {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #707070;
+}
+
+/* 
+the last child pseudo selector is used to apply styles to the last child inside a parent. */
+.bottom-widget-posts:last-child {
+    border: none;
+    padding-bottom: none;
+}
+.sidebar-widget {
+    padding: 1em;
 }
 
 /* navigation */
@@ -217,10 +278,34 @@ Media queries
         flex-direction: row;
     }
     main {
-        width: 72%;
+        width: 74%;
     }
     aside {
-        width: 23%;
+        width: 22%;
+    }
+
+    .article-more {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-more-img-sec {
+        width: 28%;
+    }
+
+    .article-more-info-sec {
+        width: 68%;
+    }
+
+    .article-more-image,
+    .top-widget-image,
+    .bottom-widget-image {
+        height: 100%;
+    }
+
+    .article-date {
+        margin-top: 0.5em;
+        display: inline-block;
     }
 }
 
