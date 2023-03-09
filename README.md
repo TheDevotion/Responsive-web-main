@@ -1,2 +1,5 @@
-# Responsive-web-main
-here I will be posting solved responsive web tutorial from free code camp
+Hey 
+I made a professional looking website using HTML and CSS
+The website is developed with mobile first approach and It is fully responsive.
+reference used:
+FreeCodeCamp
