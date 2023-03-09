@@ -20,11 +20,16 @@ img {
     order: 1;
 }
 footer {
+    font-size: 1.125rem;
     background-color: #143774;
     text-align: center;
     color: white;
     font-family: "Ubuntu", arial;
     padding: 3em 0;
+    font-weight: 300;
+}
+.footer-title {
+    font-weight: 700;
 }
 
 /*===============
@@ -90,6 +95,8 @@ strong {
     text-decoration: none;
     order: 5;
     padding: 1em 0;
+    letter-spacing: 3px;
+    word-spacing: 6px;
 }
 .continue-reading:hover,
 .continue-reading:focus {
@@ -287,6 +294,7 @@ Media queries
     .article-more {
         flex-direction: row;
         justify-content: space-between;
+        margin: 1em 0;
     }
 
     .article-more-img-sec {
@@ -307,11 +315,18 @@ Media queries
         margin-top: 0.5em;
         display: inline-block;
     }
+    .aritcle-more-image {
+        height: 100%;
+    }
+
+    .article-title {
+        padding-top: 0;
+    }
 }
 
 /* 
  I used negative margin to have more responsive layout */
-@media (min-width: 550px) {
+@media (min-width: 550px) and (max-width: 674px) {
     .article-more-info-sec {
         margin-top: -2.5em;
     }
