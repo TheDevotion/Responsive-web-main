@@ -17,6 +17,7 @@ body {
 img {
     max-width: 100%;
     display: block; /* Very Imp */
+    order: 1;
 }
 
 /*===============
@@ -52,9 +53,11 @@ strong {
 .article-title {
     font-size: 1.5rem;
     padding: 1em 0;
+    order: 3;
 }
 .article-body {
     padding-bottom: 1em;
+    order: 4;
 }
 
 .continue-reading {
@@ -62,6 +65,7 @@ strong {
     font-weight: 700;
     color: #1792d2;
     text-decoration: none;
+    order: 5;
 }
 .continue-reading:hover,
 .continue-reading:focus {
@@ -72,6 +76,7 @@ strong {
 .article-date {
     font-size: 0.875rem;
     margin: 2em 0;
+    order: 2;
 }
 
 .article-body a {
@@ -85,15 +90,21 @@ strong {
 }
 
 /* articles  */
+/* 
+ i am ordering the css display components in different order because it is better for SEO and it makes sense if the css fails to load for some odd reason */
 .article-main {
     border-bottom: 1px solid #707070;
 
     padding-bottom: 1em;
     margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-more {
     padding: 2.5em 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* =============
